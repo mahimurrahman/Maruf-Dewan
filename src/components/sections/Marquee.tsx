@@ -1,8 +1,10 @@
-const platforms = [
+const TOOLS = [
   "Google Ads", "GA4", "Google Tag Manager", "Meta Pixel", "Conversions API",
   "Shopify", "WordPress", "Shogun", "ClickFunnels", "HubSpot", "Zapier", "Wix",
   "TikTok Ads", "Bing Ads", "Custom Code",
 ];
+
+const MARQUEE_ITEMS = [...TOOLS, ...TOOLS];
 
 export const Marquee = () => {
   return (
@@ -12,13 +14,13 @@ export const Marquee = () => {
           Trusted partners and tools
         </p>
       </div>
-      <div className="relative">
+      <div className="relative overflow-hidden">
         <div className="flex animate-ticker w-max">
-          {[...platforms, ...platforms].map((p, i) => (
-            <div key={i} className="flex items-center gap-3 px-7 shrink-0">
+          {MARQUEE_ITEMS.map((tool, i) => (
+            <div key={`${tool}-${i}`} className="flex items-center gap-3 px-7 shrink-0">
               <span className="h-2 w-2 rounded-full bg-primary/70" />
               <span className="font-display font-semibold text-xl md:text-2xl text-foreground/75 whitespace-nowrap">
-                {p}
+                {tool}
               </span>
             </div>
           ))}

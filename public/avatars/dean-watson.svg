@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="Professional portrait placeholder for Dean Watson">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#DEE9FF"/>
+      <stop offset="100%" stop-color="#E9F2FF"/>
+    </linearGradient>
+  </defs>
+  <rect width="256" height="256" fill="url(#bg)"/>
+  <circle cx="128" cy="94" r="43" fill="#E8C19F"/>
+  <path d="M83 90c6-29 24-47 45-47 25 0 42 18 46 47-13-8-27-12-46-12-18 0-32 4-45 12z" fill="#273145"/>
+  <path d="M69 212c4-41 29-64 59-64s55 23 59 64H69z" fill="#1F2937"/>
+  <rect x="101" y="150" width="54" height="19" rx="8" fill="#D9A98D"/>
+</svg>

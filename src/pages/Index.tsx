@@ -41,7 +41,7 @@ const Index = () => {
             name: "Maruf Dewan",
             jobTitle: "Conversion Tracking & Analytics Expert",
             url: "/",
-            sameAs: ["https://www.linkedin.com/in/maruf-dewan/"],
+            sameAs: ["https://www.linkedin.com/in/marufahmeddewan/"],
             knowsAbout: [
               "Google Analytics 4",
               "Google Tag Manager",

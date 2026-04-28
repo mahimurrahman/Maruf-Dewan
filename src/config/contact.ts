@@ -12,7 +12,7 @@ export const contact = {
 
   // TODO: Replace with your real email and LinkedIn.
   email: "hello@marufdewan.com",
-  linkedinUrl: "https://www.linkedin.com/in/maruf-dewan/",
+  linkedinUrl: "https://www.linkedin.com/in/marufahmeddewan/",
 } as const;
 
 export const whatsappLink = () => {
