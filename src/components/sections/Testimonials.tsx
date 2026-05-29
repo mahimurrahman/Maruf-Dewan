@@ -14,18 +14,18 @@ type Testimonial = {
 const testimonials: Testimonial[] = [
   {
     name: "Adelaide De Vos",
-    role: "3,922 followers · LinkedIn",
+    role: "3,922 followers",
     quote:
-      "Maruf exceeded my expectations. Professional, patient, clear in his explanations and committed to results. Highly recommend.",
+      "I had the pleasure of working with Maruf and he exceeded my expectations. Professional, patient, clear in his explanations, and committed to client satisfaction.",
     rating: 5,
     avatar: "/avatars/adelaide-de-vos.svg",
     fallbackInitials: "AD",
   },
   {
     name: "Dean Watson",
-    role: "Founder",
+    role: "1,030 followers",
     quote:
-      "He set up our Google & Meta tracking and we got 20%+ more conversions on the same ad spend. He explains the why, not just the how.",
+      "Maruf set up our tracking for Google Ads and Meta Ads, which helped us get 20%+ more conversions on the same ad spend. He explained why it works and how it improves results.",
     rating: 5,
     avatar: "/avatars/dean-watson.svg",
     fallbackInitials: "DW",
@@ -34,16 +34,16 @@ const testimonials: Testimonial[] = [
     name: "David Friend",
     role: "CEO, Profitable Sites",
     quote:
-      "Accurate tracking that helped us scale ads fast and boost conversions by over 25%. Clear insight into which ads drive revenue.",
+      "Maruf set up accurate tracking that helped us scale ads fast and boost conversions by over 25%. He gave us clear insight into which ads drive real revenue.",
     rating: 5,
     avatar: "/avatars/david-friend.svg",
     fallbackInitials: "DF",
   },
   {
     name: "Lalita Sundari",
-    role: "7,924 followers · LinkedIn",
+    role: "7,924 followers",
     quote:
-      "Strategic mindset and deep expertise in GTM, GA4, Pixel and server-side tracking. Invaluable. I highly recommend.",
+      "Maruf's strategic mindset and expertise in GTM, GA4, Pixel & Server Side Tracking are invaluable. I highly recommend him!",
     rating: 5,
     avatar: "/avatars/lalita-sundari.svg",
     fallbackInitials: "LS",
@@ -79,7 +79,7 @@ export const Testimonials = () => {
           <blockquote className="font-display font-bold text-xl sm:text-2xl md:text-4xl leading-[1.15] tracking-[-0.02em] max-w-4xl">
             "Maruf set up accurate tracking that helped us scale ads fast and
             boost conversions by over <span className="text-primary">25%</span>.
-            He gave us clear insight into which ads actually drive revenue."
+            He gave us clear insight into which ads drive real revenue."
           </blockquote>
           <figcaption className="mt-8 flex items-center gap-3">
             <Avatar className="h-11 w-11 ring-1 ring-border/80 shadow-sm">
@@ -91,7 +91,7 @@ export const Testimonials = () => {
             <div>
               <div className="font-semibold text-sm">{featuredTestimonial.name}</div>
               <div className="font-mono-ui text-[11px] text-muted-foreground uppercase tracking-[0.15em]">
-                CEO · Profitable Sites
+                CEO, Profitable Sites
               </div>
             </div>
           </figcaption>

@@ -4,38 +4,37 @@
 
 @layer base {
   :root {
-    /* Soft pastel-blue canvas, indigo CTA, yellow announcement, pin red */
-    --background: 224 100% 96%;      /* #EAF0FF */
-    --foreground: 230 25% 10%;
+    --background: 221 28% 5%;
+    --foreground: 210 20% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 230 25% 10%;
+    --card: 220 17% 9%;
+    --card-foreground: 210 20% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 230 25% 10%;
+    --popover: 220 17% 9%;
+    --popover-foreground: 210 20% 98%;
 
-    --primary: 244 75% 60%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 152 100% 50%;
+    --primary-foreground: 222 47% 11%;
 
-    --secondary: 224 70% 92%;
-    --secondary-foreground: 230 25% 10%;
+    --secondary: 220 13% 16%;
+    --secondary-foreground: 210 20% 98%;
 
-    --muted: 224 50% 94%;
-    --muted-foreground: 230 12% 38%;
+    --muted: 220 13% 16%;
+    --muted-foreground: 215 13% 65%;
 
-    --accent: 244 75% 60%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 152 100% 50%;
+    --accent-foreground: 222 47% 11%;
 
     --sage: 152 62% 42%;
-    --highlight: 48 100% 70%;
+    --highlight: 152 100% 50%;
     --pin: 358 75% 56%;
 
-    --destructive: 0 70% 45%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 230 30% 88%;
-    --input: 230 30% 88%;
-    --ring: 244 75% 60%;
+    --border: 220 13% 20%;
+    --input: 220 13% 20%;
+    --ring: 152 100% 50%;
 
     --radius: 1rem;
 
