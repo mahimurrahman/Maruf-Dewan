@@ -1,4 +1,5 @@
 import { Mail, Linkedin, MessageCircle } from "lucide-react";
+import { Link } from "react-router-dom";
 import { contact, whatsappLink } from "@/config/contact";
 
 export const Footer = () => {
@@ -10,7 +11,7 @@ export const Footer = () => {
           <a href={contact.linkedinUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 hover:text-primary"><Linkedin className="h-4 w-4" /> LinkedIn</a>
           <a href={whatsappLink()} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 hover:text-primary"><MessageCircle className="h-4 w-4" /> WhatsApp</a>
           <a href={`mailto:${contact.email}`} className="inline-flex items-center gap-2 hover:text-primary"><Mail className="h-4 w-4" /> {contact.email}</a>
-          <a href="/price" className="hover:text-primary">Pricing</a>
+          <Link to="/price" className="hover:text-primary">Pricing</Link>
         </div>
         <p className="font-mono-ui text-[11px] text-muted-foreground uppercase tracking-[0.18em] mt-10">© 2025 Maruf Ahmed Dewan</p>
       </div>
