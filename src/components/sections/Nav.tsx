@@ -32,7 +32,7 @@ export const Nav = ({ isPricing = false }: { isPricing?: boolean }) => {
     <header className="sticky top-0 z-40">
       <div className={`transition-all duration-300 ${scrolled ? "bg-background/85 backdrop-blur-md border-b border-border" : "bg-background/40"}`}>
         <nav className="max-w-7xl mx-auto px-5 lg:px-10 h-16 flex items-center justify-between">
-          <a href={isPricing ? "/" : "#top"} className="flex items-baseline gap-2 group">
+          <a href={isPricing ? "/" : "#top"} aria-label="Maruf Ahmed Dewan home" className="flex items-baseline gap-2 group">
             <span className="font-display font-bold text-lg text-foreground">Maruf Ahmed Dewan</span>
             <span className="hidden sm:inline font-mono-ui text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
               — Tracking & Analytics

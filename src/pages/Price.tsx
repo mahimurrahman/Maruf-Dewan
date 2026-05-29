@@ -47,7 +47,7 @@ const trackingPlans: Plan[] = [
     href: contact.tallyUrl,
   },
   {
-    title: "🎯 Automation, OCT & AI Dashboards",
+    title: "🎯 Automation, Offline Conversion Tracking & AI Dashboards",
     price: "Contact for Custom Quote",
     description: "Scale backend data flows, safeguard automations, and launch AI reporting.",
     features: [

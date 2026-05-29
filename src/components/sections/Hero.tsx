@@ -70,8 +70,8 @@ export const Hero = () => {
         </motion.div>
 
         <motion.div
-        initial={{ opacity: 0, y: 24 }}
-        animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.35 }}
           className="mt-12 mx-auto max-w-3xl"
         >

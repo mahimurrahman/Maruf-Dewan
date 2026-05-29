@@ -10,7 +10,7 @@ export const Booking = () => {
           <div className="pointer-events-none absolute -left-16 -bottom-24 h-80 w-80 rounded-full bg-highlight/30 blur-3xl animate-blob" style={{ animationDelay: "-5s" }} />
 
           <p className="font-mono-ui text-[11px] uppercase tracking-[0.24em] text-background/60 relative">
-            Its Free
+            It&apos;s Free
           </p>
           <h2 className="font-display font-bold text-3xl sm:text-4xl md:text-6xl mt-4 max-w-4xl tracking-[-0.03em] leading-[1.05] relative">
             Book a Free 1:1 Call to See How Broken Tracking Is Wasting Your Ad Spend

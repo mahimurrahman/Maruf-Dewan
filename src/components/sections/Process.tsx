@@ -8,7 +8,7 @@ const steps = [
     body: "We implement a reliable tracking system using GTM, GA4, Google Ads, Meta Pixel, and server-side tracking where needed.",
   },
   {
-    title: "Reporting & TAAS",
+    title: "Reporting & TAAS (Tracking as a Service)",
     body: "We validate the data and provide clear reporting so you can measure performance and scale confidently.",
   },
 ];

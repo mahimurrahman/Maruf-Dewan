@@ -43,8 +43,8 @@ export const Implementation = () => {
         </article>
 
         <article className="bg-card rounded-3xl p-7 sm:p-9 ring-1 ring-border">
-          <h3 className="font-display font-bold text-2xl">Facebook Pixel &amp; Conversion API</h3>
-          <p className="mt-3 text-muted-foreground">Get 13% lower cost per result with proper Pixel &amp; Conversion API setup</p>
+          <h3 className="font-display font-bold text-2xl">Facebook Pixel & Conversion API</h3>
+          <p className="mt-3 text-muted-foreground">Get 13% lower cost per result with proper Pixel & Conversion API setup</p>
         </article>
       </div>
     </section>

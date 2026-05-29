@@ -8,7 +8,7 @@ export const ProfileProof = () => (
         <div>
           <p className="font-display text-2xl font-bold">Maruf Ahmed Dewan</p>
           <p className="text-muted-foreground text-sm mt-1">Conversion Tracking & Analytics Expert</p>
-          <p className="text-sm mt-2">Followers: LinkedIn audience</p>
+          <p className="text-sm mt-2">Followers: LinkedIn</p>
         </div>
         <a href={contact.linkedinUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 h-11 px-5 rounded-full bg-secondary ring-1 ring-border">
           <Linkedin className="h-4 w-4" />
