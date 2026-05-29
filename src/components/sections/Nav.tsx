@@ -1,17 +1,25 @@
 import { useEffect, useState } from "react";
 import { Menu, X, MessageCircle, ArrowRight } from "lucide-react";
-import { whatsappLink } from "@/config/contact";
+import { contact, whatsappLink } from "@/config/contact";
 
-const links = [
+const homeLinks = [
+  { href: "#testimonials", label: "Reviews" },
   { href: "#services", label: "Services" },
-  { href: "#results", label: "Results" },
-  { href: "#testimonials", label: "Testimonials" },
-  { href: "#book", label: "Book" },
+  { href: "#process", label: "Process" },
+  { href: "#contact", label: "Contact" },
 ];
 
-export const Nav = ({ onBook }: { onBook: () => void }) => {
+const pricingLinks = [
+  { href: "/#testimonials", label: "Reviews" },
+  { href: "/#services", label: "Services" },
+  { href: "/#process", label: "Process" },
+  { href: "/#contact", label: "Contact" },
+];
+
+export const Nav = ({ isPricing = false }: { isPricing?: boolean }) => {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const links = isPricing ? pricingLinks : homeLinks;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
@@ -22,14 +30,10 @@ export const Nav = ({ onBook }: { onBook: () => void }) => {
 
   return (
     <header className="sticky top-0 z-40">
-      <div
-        className={`transition-all duration-300 ${
-          scrolled ? "bg-background/85 backdrop-blur-md border-b border-border" : "bg-transparent"
-        }`}
-      >
+      <div className={`transition-all duration-300 ${scrolled ? "bg-background/85 backdrop-blur-md border-b border-border" : "bg-background/40"}`}>
         <nav className="max-w-7xl mx-auto px-5 lg:px-10 h-16 flex items-center justify-between">
-          <a href="#top" className="flex items-baseline gap-2 group">
-            <span className="font-display font-bold text-lg text-foreground">Maruf Dewan</span>
+          <a href={isPricing ? "/" : "#top"} className="flex items-baseline gap-2 group">
+            <span className="font-display font-bold text-lg text-foreground">Maruf Ahmed Dewan</span>
             <span className="hidden sm:inline font-mono-ui text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
               — Tracking & Analytics
             </span>
@@ -59,10 +63,10 @@ export const Nav = ({ onBook }: { onBook: () => void }) => {
               <MessageCircle className="h-4 w-4" />
             </a>
             <button
-              onClick={onBook}
+              onClick={() => window.open(contact.calendarUrl, "_blank", "noopener,noreferrer")}
               className="hidden md:inline-flex items-center gap-2 h-10 pl-5 pr-2 rounded-full bg-primary text-primary-foreground text-sm font-semibold hover:opacity-95 transition-opacity shadow-pop"
             >
-              Book a call
+              Book A Call
               <span className="grid place-items-center h-7 w-7 rounded-full bg-background/95 text-foreground">
                 <ArrowRight className="h-3.5 w-3.5" />
               </span>
@@ -115,11 +119,11 @@ export const Nav = ({ onBook }: { onBook: () => void }) => {
             <button
               onClick={() => {
                 setOpen(false);
-                onBook();
+                window.open(contact.calendarUrl, "_blank", "noopener,noreferrer");
               }}
               className="h-12 rounded-full bg-primary text-primary-foreground font-semibold"
             >
-              Book a free call
+              Book A Call
             </button>
           </div>
         </div>

@@ -1,24 +1,24 @@
 const TOOLS = [
-  "Google Ads", "GA4", "Google Tag Manager", "Meta Pixel", "Conversions API",
-  "Shopify", "WordPress", "Shogun", "ClickFunnels", "HubSpot", "Zapier", "Wix",
-  "TikTok Ads", "Bing Ads", "Custom Code",
+  "Google Ads Conversion Tracking Setup",
+  "Meta Pixel & Conversion API (CAPI) Integration",
+  "First-Party Server-Side Tracking Implementation",
+  "Google Analytics 4 Event & Funnel Tracking",
+  "All Types of Form Tracking (Lead, Contact etc.)",
+  "Offline Conversion Tracking for Ad Platforms",
+  "Custom Event Tracking via Google Tag Manager",
+  "GDPR-Compliant Cookie Consent Integration",
 ];
 
 const MARQUEE_ITEMS = [...TOOLS, ...TOOLS];
 
 export const Marquee = () => {
   return (
-    <section aria-label="Trusted partners and tools" className="py-10">
-      <div className="max-w-7xl mx-auto px-5 lg:px-10 mb-5 text-center">
-        <p className="font-mono-ui text-[11px] uppercase tracking-[0.22em] text-muted-foreground">
-          Trusted partners and tools
-        </p>
-      </div>
+    <section aria-label="Scrolling services bar" className="py-10 border-y border-border">
       <div className="relative overflow-hidden">
         <div className="flex animate-ticker w-max">
           {MARQUEE_ITEMS.map((tool, i) => (
             <div key={`${tool}-${i}`} className="flex items-center gap-3 px-7 shrink-0">
-              <span className="h-2 w-2 rounded-full bg-primary/70" />
+              <span className="h-2 w-2 rounded-full bg-primary" />
               <span className="font-display font-semibold text-xl md:text-2xl text-foreground/75 whitespace-nowrap">
                 {tool}
               </span>
