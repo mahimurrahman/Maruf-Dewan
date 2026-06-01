@@ -13,11 +13,13 @@ export const contact = {
   linkedinUrl: "https://www.linkedin.com/in/marufahmeddewan/",
 } as const;
 
-export const whatsappLink = () => {
+export const whatsappMessageLink = (message = contact.whatsappPrefilledMessage) => {
   const digits = contact.whatsappNumber.replace(/\D/g, "");
-  const text = encodeURIComponent(contact.whatsappPrefilledMessage);
+  const text = encodeURIComponent(message);
   return `https://wa.me/${digits}?text=${text}`;
 };
+
+export const whatsappLink = () => whatsappMessageLink();
 
 export const tallyPlanLink = (plan: string) =>
   `${contact.tallyUrl}?plan=${encodeURIComponent(plan)}`;

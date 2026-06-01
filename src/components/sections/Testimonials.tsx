@@ -1,36 +1,56 @@
 import { motion } from "framer-motion";
 import { Quote, Star } from "lucide-react";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
-const testimonials = [
+type Testimonial = {
+  name: string;
+  role: string;
+  quote: string;
+  rating: 1 | 2 | 3 | 4 | 5;
+  avatar: string;
+  fallbackInitials: string;
+};
+
+const testimonials: Testimonial[] = [
   {
-    name: "Adélaide De Vos",
-    role: "3,922 followers · LinkedIn",
+    name: "Adelaide De Vos",
+    role: "3,922 followers",
     quote:
-      "Maruf exceeded my expectations. Professional, patient, clear in his explanations and committed to results. Highly recommend.",
-    accent: "#FFB7A8",
+      "I had the pleasure of working with Maruf and he exceeded my expectations. Professional, patient, clear in his explanations, and committed to client satisfaction.",
+    rating: 5,
+    avatar: "/avatars/adelaide-de-vos.svg",
+    fallbackInitials: "AD",
   },
   {
     name: "Dean Watson",
-    role: "Founder",
+    role: "1,030 followers",
     quote:
-      "He set up our Google & Meta tracking and we got 20%+ more conversions on the same ad spend. He explains the why, not just the how.",
-    accent: "#A6C4FF",
+      "Maruf set up our tracking for Google Ads and Meta Ads, which helped us get 20%+ more conversions on the same ad spend. He explained why it works and how it improves results.",
+    rating: 5,
+    avatar: "/avatars/dean-watson.svg",
+    fallbackInitials: "DW",
   },
   {
     name: "David Friend",
     role: "CEO, Profitable Sites",
     quote:
-      "Accurate tracking that helped us scale ads fast and boost conversions by over 25%. Clear insight into which ads drive revenue.",
-    accent: "#C9B6FF",
+      "Maruf set up accurate tracking that helped us scale ads fast and boost conversions by over 25%. He gave us clear insight into which ads drive real revenue.",
+    rating: 5,
+    avatar: "/avatars/david-friend.svg",
+    fallbackInitials: "DF",
   },
   {
     name: "Lalita Sundari",
-    role: "7,924 followers · LinkedIn",
+    role: "7,924 followers",
     quote:
-      "Strategic mindset and deep expertise in GTM, GA4, Pixel and server-side tracking. Invaluable. I highly recommend.",
-    accent: "#9CE0C2",
+      "Maruf's strategic mindset and expertise in GTM, GA4, Pixel & Server Side Tracking are invaluable. I highly recommend him!",
+    rating: 5,
+    avatar: "/avatars/lalita-sundari.svg",
+    fallbackInitials: "LS",
   },
 ];
+
+const featuredTestimonial = testimonials[2];
 
 export const Testimonials = () => {
   return (
@@ -44,7 +64,7 @@ export const Testimonials = () => {
             Growth, in their words.
           </h2>
           <p className="text-muted-foreground mt-4 text-base sm:text-lg">
-            Discover how we’ve driven growth and innovation.
+            Discover how we've driven growth and innovation.
           </p>
         </div>
 
@@ -59,14 +79,19 @@ export const Testimonials = () => {
           <blockquote className="font-display font-bold text-xl sm:text-2xl md:text-4xl leading-[1.15] tracking-[-0.02em] max-w-4xl">
             "Maruf set up accurate tracking that helped us scale ads fast and
             boost conversions by over <span className="text-primary">25%</span>.
-            He gave us clear insight into which ads actually drive revenue."
+            He gave us clear insight into which ads drive real revenue."
           </blockquote>
           <figcaption className="mt-8 flex items-center gap-3">
-            <div className="h-10 w-10 rounded-full" style={{ backgroundColor: "#C9B6FF" }} />
+            <Avatar className="h-11 w-11 ring-1 ring-border/80 shadow-sm">
+              <AvatarImage src={featuredTestimonial.avatar} alt={`${featuredTestimonial.name} portrait`} />
+              <AvatarFallback className="bg-muted text-foreground font-semibold text-xs">
+                {featuredTestimonial.fallbackInitials}
+              </AvatarFallback>
+            </Avatar>
             <div>
-              <div className="font-semibold text-sm">David Friend</div>
+              <div className="font-semibold text-sm">{featuredTestimonial.name}</div>
               <div className="font-mono-ui text-[11px] text-muted-foreground uppercase tracking-[0.15em]">
-                CEO · Profitable Sites
+                CEO, Profitable Sites
               </div>
             </div>
           </figcaption>
@@ -75,7 +100,7 @@ export const Testimonials = () => {
         <div className="grid md:grid-cols-2 gap-5">
           {testimonials.map((t, i) => (
             <motion.figure
-              key={i}
+              key={t.name}
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
@@ -83,13 +108,18 @@ export const Testimonials = () => {
               className="bg-card rounded-3xl p-7 ring-1 ring-border shadow-card hover:shadow-pop transition-shadow"
             >
               <div className="flex items-center gap-1 mb-4">
-                {Array.from({ length: 5 }).map((_, k) => (
+                {Array.from({ length: t.rating }).map((_, k) => (
                   <Star key={k} className="h-3.5 w-3.5 fill-highlight text-highlight" />
                 ))}
               </div>
               <p className="text-foreground/90 leading-relaxed">"{t.quote}"</p>
               <figcaption className="mt-6 flex items-center gap-3 pt-6 border-t border-border">
-                <div className="h-9 w-9 rounded-full" style={{ backgroundColor: t.accent }} />
+                <Avatar className="h-10 w-10 ring-1 ring-border/80 shadow-sm">
+                  <AvatarImage src={t.avatar} alt={`${t.name} portrait`} />
+                  <AvatarFallback className="bg-muted text-foreground font-semibold text-xs">
+                    {t.fallbackInitials}
+                  </AvatarFallback>
+                </Avatar>
                 <div>
                   <div className="font-semibold text-sm">{t.name}</div>
                   <div className="font-mono-ui text-[11px] text-muted-foreground uppercase tracking-[0.12em]">
