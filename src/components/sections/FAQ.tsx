@@ -48,9 +48,11 @@ export const FAQ = () => {
                 className="bg-card rounded-2xl ring-1 ring-border shadow-card overflow-hidden"
               >
                 <button
+                  id={`faq-trigger-${i}`}
                   onClick={() => setOpen(isOpen ? null : i)}
                   className="w-full flex items-center justify-between gap-4 px-5 sm:px-7 py-5 text-left"
                   aria-expanded={isOpen}
+                  aria-controls={`faq-panel-${i}`}
                 >
                   <span className="font-display font-semibold text-base sm:text-lg tracking-[-0.01em]">
                     {f.q}
