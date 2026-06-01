@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { Menu, X, MessageCircle, ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
 import { whatsappLink } from "@/config/contact";
 
 const links = [
