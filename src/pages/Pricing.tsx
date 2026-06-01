@@ -13,7 +13,7 @@ const Pricing = () => {
   const openBooking = () => setBookingOpen(true);
 
   return (
-    <main className="bg-background text-foreground min-h-screen">
+    <main id="top" className="bg-background text-foreground min-h-screen">
       <AnnouncementBar />
       <Nav onBook={openBooking} />
       <PricingSection />
